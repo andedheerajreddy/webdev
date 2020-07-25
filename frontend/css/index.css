@@ -1,39 +1,39 @@
 body{
 	border: 20px solid #bdc3c7;
     	
-    padding: 18px;
-    margin: 19.2px 200px;	
+    padding: 2%;
+    margin: 2% 25%;	
 
 }
 .top{
-    margin: 19.2px 0%;
-    width:921.6px;
+    margin: 2% 0%;
+    width:96%;
 }
 .name{
-    padding-left: 19.2px;
-    margin-left: 19.2px;
+    padding-left: 2%;
+    margin-left: 2%;
 }
 div{
-    margin:19.2px 19.2px;
-    padding-left: 19.2px;
+    margin:2% 2%;
+    padding-left: 2%;
 }
 .headings{
-    margin-bottom: 9.6px;
+    margin-bottom: 1%;
 }
 p {
     font-size: large;
 }
 table{
-    margin:19.2px 0%;
-    width:816px;
+    margin: 2% 0%;
+    width:85%;
 }
 hr{
     border:1px solid #bdc3c7;
-    width: 672px;
+    width: 70%;
     color:#bdc3c7;
 }
 .line{
    
     border:2px solid #bdc3c7;
-    width: 980px;
+    width: 100%;
 }
