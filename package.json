@@ -2,16 +2,16 @@
   "name": "webdev",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start":"node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/andedheerajreddy/webdev.git"
   },
-  "author": "",
+  "author": "dheeraj",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/andedheerajreddy/webdev/issues"
