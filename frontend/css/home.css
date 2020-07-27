@@ -1,11 +1,16 @@
 body{
     background-color: #ffdbc5;
-}
-div{
-    text-align: center;
-    margin-top: 20%; 
     font-family:cursive;
+    margin-left: 2%;
 }
-a:hover{
-    color: red;
+
+table{
+    width: 70%;
+}
+tr{
+    border-bottom:1px solid gray;
+}
+p{
+    margin: 2%;
+    padding: 5%;
 }

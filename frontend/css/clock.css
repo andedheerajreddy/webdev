@@ -1,0 +1,35 @@
+body{
+    margin-top:5%;
+    margin-left: 5%;
+    background-color: #f5f1da;
+    font-family: cursive;
+}
+div{
+    margin-top: 2%;
+    float:left;
+    width:30%;
+   text-align: center;
+
+}
+.space{
+    width:60%;
+   
+    padding-left: 5%;
+    padding-top: 10%;
+    padding-bottom: 20%;
+}
+.complete{
+    width:100%;
+}
+
+
+@media (max-width:1056px){
+  div{
+      width:100%;
+  }
+  .space{
+    width:100%;
+    margin-right: 0%;  
+    padding-top: 0%;
+}
+}

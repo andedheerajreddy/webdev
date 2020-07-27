@@ -8,4 +8,7 @@ app.get('/',(req,res)=>{
 app.get('/resume',(req,res)=>{
     res.sendFile(__dirname+"/frontend/html/index.html");
 })
+app.get('/clock',(req,res)=>{
+    res.sendFile(__dirname+"/frontend/html/clock.html")
+})
 app.listen(process.env.PORT||4000,()=>{console.log("server started running");})
