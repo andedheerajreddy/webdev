@@ -3,6 +3,9 @@ body{
     background-color:#ffeadb;
     font-family:  'Salsa', cursive;
 }
+a{
+    margin-left: 3px;
+}
 canvas
 {
     background-color: black;
