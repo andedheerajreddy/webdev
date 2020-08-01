@@ -59,7 +59,7 @@ var now = new Date();
   second = (second*Math.PI/30);
   drawHand(c, second, radius*0.9, radius*0.02);}
 
-
+  
 function drawHand(c, pos, length, width) {
   c.beginPath();
   c.lineWidth = width;
