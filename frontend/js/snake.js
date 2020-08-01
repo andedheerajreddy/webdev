@@ -20,7 +20,7 @@ boo[str]="true";
 
 
 var x=scale,y=0;
-setInterval(snake, 200);
+var inte=setInterval(snake, 200);
 
 function snake(){
     //every time for 1/4 second clearing and updatind the snake position
@@ -44,8 +44,22 @@ function snake(){
             pos.splice(0, pos.length);
             boo.splice(0,boo.length);
             pos.push( { x:0,y:0 });
+            var sco="SCORE : "+count;
             xpos=0;ypos=0;count=1;
-        alert("game over");}
+            ctx.clearRect(0,0,canvas.width,canvas.height);
+            clearInterval(inte);
+            ctx.fillStyle="black";
+            ctx.font="20px arial";
+            ctx.fillText("GAME OVER!!!",60,100);
+            ctx.fillText(sco,70,150);
+            setTimeout(()=>{
+                
+                inte= setInterval(snake,200);
+          
+            },5000);
+         
+          
+      }
         boo[str]="true";
     }
     else{
@@ -58,8 +72,20 @@ function snake(){
             pos.splice(0, pos.length);
             boo.splice(0,boo.length);
             pos.push( { x:0,y:0 });
+            var sco="SCORE : "+count;
             xpos=0;ypos=0;count=1;
-        alert("game over");}
+            ctx.clearRect(0,0,canvas.width,canvas.height);
+            clearInterval(inte);
+            ctx.fillStyle="black";
+            ctx.font="20px arial";
+            ctx.fillText("GAME OVER!!!",60,100);
+            ctx.fillText(sco,70,150);
+            setTimeout(()=>{
+                
+                inte= setInterval(snake,200);
+          
+            },5000);
+       }
         boo[str]="true";
         // mySet.add(pos[count-1]);
     }
