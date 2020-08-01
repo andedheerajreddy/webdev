@@ -52,7 +52,7 @@ function snake(){
     for(var i=0;i<count;i++)
     ctx.fillRect(pos[i].x,pos[i].y,scale,scale);
     
-    console.log(pos[count-1].x+"   "+pos[count-1].y);
+    // console.log(pos[count-1].x+"   "+pos[count-1].y);
     // if(mySet.size!=count)
     // alert("GAME OVER"+mySet.size);
     
