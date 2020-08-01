@@ -54,8 +54,7 @@ function snake(){
             ctx.fillText(sco,70,150);
             setTimeout(()=>{
                 
-                inte= setInterval(snake,200);
-          
+                location.reload();
             },5000);
          
           
@@ -83,7 +82,7 @@ function snake(){
             ctx.fillText(sco,70,150);
             setTimeout(()=>{
                 
-                inte= setInterval(snake,200);
+                location.reload();
           
             },5000);
        }
