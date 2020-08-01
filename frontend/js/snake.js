@@ -4,23 +4,37 @@ canvas.width=300;
 canvas.height=300;
 var scale = 10;
 var xpos=0,ypos=0;
-ctx.fillStyle="black";
-ctx.fillRect(0,0,scale,scale);
+
 var fruitx=Math.floor(Math.random()*30);
 var fruity=Math.floor(Math.random()*30);
-ctx.fillStyle="violet";
-ctx.fillRect(fruitx*scale,fruity*scale,scale,scale);
 ctx.fillStyle="black";
+
 var pos=[];
 var count=1;
 pos.push( { x:0,y:0 });
 var str=""+0+" "+0;
 var boo=[];
 boo[str]="true";
-
+var inte;
 
 var x=scale,y=0;
-var inte=setInterval(snake, 200);
+var d=0;
+ctx.font="20px Arial";
+ctx.fillText("PRESS ENTER TO START!!",30,100);
+
+document.addEventListener('keyup',function(event){
+
+    if(event.key=='Enter'&& d==0){  ctx.clearRect(0,0,canvas.width,canvas.height);
+        d++; 
+        ctx.fillStyle="black";
+        ctx.fillRect(0,0,scale,scale);
+        ctx.fillStyle="violet";
+        ctx.fillRect(fruitx*scale,fruity*scale,scale,scale);
+ctx.fillStyle="black";
+     inte=setInterval(snake, 200);
+    }
+
+});
 
 function snake(){
     //every time for 1/4 second clearing and updatind the snake position
@@ -55,7 +69,7 @@ function snake(){
             setTimeout(()=>{
                 
                 location.reload();
-            },5000);
+            },2000);
          
           
       }
@@ -84,7 +98,7 @@ function snake(){
                 
                 location.reload();
           
-            },5000);
+            },2000);
        }
         boo[str]="true";
         // mySet.add(pos[count-1]);
