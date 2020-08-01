@@ -75,6 +75,7 @@ function snake(){
             var sco="SCORE : "+count;
             xpos=0;ypos=0;count=1;
             ctx.clearRect(0,0,canvas.width,canvas.height);
+            
             clearInterval(inte);
             ctx.fillStyle="black";
             ctx.font="20px arial";
