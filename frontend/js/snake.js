@@ -13,11 +13,10 @@ ctx.fillRect(fruitx*scale,fruity*scale,scale,scale);
 ctx.fillStyle="black";
 var pos=[];
 var count=1;
-var mySet = new Set();
 pos.push( { x:0,y:0 });
-
-mySet.add( pos[0]);
-
+var str=""+0+" "+0;
+var boo=[];
+boo[str]="true";
 var x=scale,y=0;
 setInterval(snake, 200);
 
@@ -30,20 +29,36 @@ function snake(){
     
     if(pos.length==count){
                 // mySet.delete(pos[0]);
+                 str=""+pos[0].x+" "+pos[0].y;
+                 boo[str]=false;
         for(var i=1;i<count;i++){
             pos[i-1].x=pos[i].x;
             pos[i-1].y=pos[i].y;
         }
         pos[count-1].x=xpos;
         pos[count-1].y=ypos;
-        // mySet.add(pos[count-1]);
-
+        str=""+pos[count-1].x+" "+pos[count-1].y;
+        if(boo[str]=="true"){
+            pos.splice(0, pos.length);
+            boo.splice(0,boo.length);
+            pos.push( { x:0,y:0 });
+            xpos=0;ypos=0;count=1;
+        alert("game over");}
+        boo[str]="true";
     }
     else{
         pos[count-1]={
             x:xpos,
             y:ypos
         };
+        str=""+pos[count-1].x+" "+pos[count-1].y;
+        if(boo[str]=="true"){
+            pos.splice(0, pos.length);
+            boo.splice(0,boo.length);
+            pos.push( { x:0,y:0 });
+            xpos=0;ypos=0;count=1;
+        alert("game over");}
+        boo[str]="true";
         // mySet.add(pos[count-1]);
     }
     let set= new Set();
@@ -73,5 +88,3 @@ document.addEventListener('keydown',function(event){
     else if(event.key=="ArrowRight"&&y!=0)
     {x=scale;y=0;}
  })
-
- 
