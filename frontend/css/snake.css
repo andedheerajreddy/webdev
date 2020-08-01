@@ -1,7 +1,57 @@
 body{
     margin:2%;
+    background-color:#ffeadb;
 }
 canvas
 {
-    background-color: gray;
+    background-color: black;
+}
+button{
+    margin :2px;
+    font-size: small;
+}
+.up{
+    margin-left: 110px;
+    padding-left:15px;
+    margin-top: 25px;
+    padding-right: 15px;
+}
+.left{
+    margin-left: 30px;
+    padding-left:10px;
+    padding-right:10px;
+}
+.right{
+    padding-left:7px;
+    padding-right:7px;   
+}
+.down{
+    margin-left: 110px;
+    padding-left:7px;
+    padding-right:7px;
+}
+.enter{
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    
+}
+
+@media (min-width:500px){
+    button{
+        display:none !important ;
+    }
+    body{
+        margin-left: 25%;
+        margin-top: 10%;
+    }
+}
+@media (max-width:500px){
+    button{
+        display: inline !important;
+    }
+    body{
+        margin:2%;
+    }
 }

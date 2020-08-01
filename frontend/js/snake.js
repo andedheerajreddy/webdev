@@ -7,7 +7,7 @@ var xpos=0,ypos=0;
 
 var fruitx=Math.floor(Math.random()*30);
 var fruity=Math.floor(Math.random()*30);
-ctx.fillStyle="black";
+ctx.fillStyle="white";
 
 var pos=[];
 var count=1;
@@ -21,16 +21,26 @@ var x=scale,y=0;
 var d=0;
 ctx.font="20px Arial";
 ctx.fillText("PRESS ENTER TO START!!",30,100);
+function start(){ if(d==0){d++;
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    d++; 
+    ctx.fillStyle="#EE0000";
+    ctx.fillRect(0,0,scale,scale);
+    ctx.fillStyle="pink";
+    ctx.fillRect(fruitx*scale,fruity*scale,scale,scale);
+ctx.fillStyle="#EE0000";
+ inte=setInterval(snake, 200);}
+}
 
 document.addEventListener('keyup',function(event){
 
     if(event.key=='Enter'&& d==0){  ctx.clearRect(0,0,canvas.width,canvas.height);
         d++; 
-        ctx.fillStyle="black";
+        ctx.fillStyle="#EE0000";
         ctx.fillRect(0,0,scale,scale);
-        ctx.fillStyle="violet";
+        ctx.fillStyle="pink";
         ctx.fillRect(fruitx*scale,fruity*scale,scale,scale);
-ctx.fillStyle="black";
+ctx.fillStyle="#EE0000";
      inte=setInterval(snake, 200);
     }
 
@@ -40,7 +50,7 @@ function snake(){
     //every time for 1/4 second clearing and updatind the snake position
     ctx.clearRect(0,0,canvas.width,canvas.height);
     if(xpos==fruitx*scale && ypos==fruity*scale){ fruitx=Math.floor(Math.random()*30);fruity=Math.floor(Math.random()*30);count++;}
-    ctx.fillStyle="violet";
+    ctx.fillStyle="pink";
     ctx.fillRect(fruitx*scale,fruity*scale,scale,scale);
     
     if(pos.length==count){
@@ -62,7 +72,7 @@ function snake(){
             xpos=0;ypos=0;count=1;
             ctx.clearRect(0,0,canvas.width,canvas.height);
             clearInterval(inte);
-            ctx.fillStyle="black";
+            ctx.fillStyle="white";
             ctx.font="20px arial";
             ctx.fillText("GAME OVER!!!",60,100);
             ctx.fillText(sco,70,150);
@@ -90,7 +100,7 @@ function snake(){
             ctx.clearRect(0,0,canvas.width,canvas.height);
             
             clearInterval(inte);
-            ctx.fillStyle="black";
+            ctx.fillStyle="white";
             ctx.font="20px arial";
             ctx.fillText("GAME OVER!!!",60,100);
             ctx.fillText(sco,70,150);
@@ -105,9 +115,13 @@ function snake(){
     }
     let set= new Set();
     set.add(pos);
-    ctx.fillStyle="black";
-    for(var i=0;i<count;i++)
-    ctx.fillRect(pos[i].x,pos[i].y,scale,scale);
+    ctx.fillStyle="pink";
+    for(var i=0;i<count;i++){
+if(i==count-1)
+ctx.fillStyle="#EE0000";
+        ctx.fillRect(pos[i].x,pos[i].y,scale,scale);
+        ctx.fillStyle="pink";
+}
     
     // console.log(pos[count-1].x+"   "+pos[count-1].y);
     // if(mySet.size!=count)
@@ -117,6 +131,22 @@ function snake(){
     //for movement
 xpos=(300+xpos+x)%300;
 ypos=(ypos+300+y)%300;
+}
+function up(){
+    if(x!=0){
+    y=-scale;x=0;}
+}
+function down(){
+    if(x!=0){
+    y=scale;x=0;}
+}
+function right(){
+    if(y!=0){
+    x=scale;y=0;}
+}
+function left(){
+    if(y!=0){
+    x=-scale;y=0;}
 }
 
 document.addEventListener('keydown',function(event){
