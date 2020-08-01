@@ -17,6 +17,8 @@ pos.push( { x:0,y:0 });
 var str=""+0+" "+0;
 var boo=[];
 boo[str]="true";
+
+
 var x=scale,y=0;
 setInterval(snake, 200);
 
