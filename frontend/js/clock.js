@@ -5,7 +5,6 @@ var radius= canvas.height/2;
 var c= canvas.getContext("2d");
 c.beginPath();
 c.translate(radius,radius);
-
 radius=radius*0.90;
 setInterval(clock, 1000);
 function clock(){
@@ -59,7 +58,7 @@ var now = new Date();
   second = (second*Math.PI/30);
   drawHand(c, second, radius*0.9, radius*0.02);}
 
-  
+
 function drawHand(c, pos, length, width) {
   c.beginPath();
   c.lineWidth = width;

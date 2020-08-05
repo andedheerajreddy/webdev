@@ -1,0 +1,45 @@
+body{
+    margin: 2% 10%;
+}
+
+table,tr,td{
+  
+    border:   1px solid  #999;  
+    
+    /* border-top: 0px solid black; */
+}
+/* table{
+    margin-left: 14%;
+} */
+.numberbackground{
+    background-color:lightgray;
+    min-height: 250px;
+}
+.button{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width:100%;
+}
+.number{
+font-size: 70px;
+text-align: center;
+padding-bottom: 50px;
+padding-top: 100px;
+}
+td{
+    min-width:90px;
+    height: 30px;
+    font-size: 1.5em;
+    text-align: left;
+    padding: 0px;
+    margin: 0%;
+}
+
+.adjust{
+    width: 40%;
+    float: left;
+}
+.rules{
+    max-width: 200px;
+}
