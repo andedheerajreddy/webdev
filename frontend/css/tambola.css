@@ -1,5 +1,7 @@
 body{
-    margin: 2% 10%;
+    margin: auto 10%;
+    font-family: 'Salsa', cursive;
+
 }
 
 table,tr,td{
@@ -12,8 +14,10 @@ table,tr,td{
     margin-left: 14%;
 } */
 .numberbackground{
-    background-color:lightgray;
+    /* background-color:lightgray; */
+    text-align: center;
     min-height: 250px;
+    max-width:1140px;
 }
 .button{
     text-align: center;
@@ -24,15 +28,16 @@ table,tr,td{
 .number{
 font-size: 70px;
 text-align: center;
-padding-bottom: 50px;
-padding-top: 100px;
+padding-bottom: 13px;
+color: green;
+padding-top: 30px;
 }
 td{
     min-width:90px;
-    height: 30px;
-    font-size: 1.5em;
+    height: 35.2px;
+    font-size: 23px;
     text-align: left;
-    padding: 0px;
+    padding: 0px !important;
     margin: 0%;
 }
 
@@ -40,6 +45,25 @@ td{
     width: 40%;
     float: left;
 }
+.previous{
+    text-align: center;
+    font-size: 50px;
+    color: red;
+}
 .rules{
     max-width: 200px;
+    min-height: 350px;
+    margin-right: 3%;
+}
+
+@media (max-width:685px){
+    /* body{
+        margin:0%;
+    } */
+    .adjust{
+        float :none;
+        min-width:100%;
+        margin-bottom: 30px;
+    }
+
 }

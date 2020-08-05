@@ -1,10 +1,11 @@
 $(function(){
-  
+    var prev;
     var visitied=[];
     var count=0;
+    var rand;
     $("button").click(function(){
-        
-        var rand=Math.floor(Math.random()*90);
+        prev=rand;
+         rand=Math.floor(Math.random()*90);
         rand++;
         if(count==90){
 
@@ -17,6 +18,8 @@ $(function(){
         }
             visitied[rand]="true";
             count++;
+            if(count>1)
+            $(".previous").html(prev);
         $(".number").html(rand);
         var a=$("td");
         var c=0;
@@ -31,9 +34,9 @@ $(function(){
       })
     
     
-      //   $(".number").hide(1000).show(1000).fadeOut().fadeIn();
-        $(".number").animate({zoom:"200%"},1000);
-        $(".number").animate({zoom:"100%"},1000);
+        $(".number").hide().slideUp().slideDown("slow");
+        // $(".number").animate({zoom:"200%"},1000);
+        // $(".number").animate({zoom:"100%"},1000);
     }
     })
   
