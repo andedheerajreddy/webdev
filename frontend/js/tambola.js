@@ -18,9 +18,16 @@ $(function(){
         }
             visitied[rand]="true";
             count++;
-            if(count>1)
-            $(".previous").html(prev);
-        $(".number").html(rand);
+            if(count>1){
+                $(".previous").slideUp("slow",function(){
+                    $(".previous").html(prev).hide().slideDown("slow"); 
+                });
+         
+        }
+        $(".number").slideUp("slow",function(){
+            $(".number").html(rand).hide().slideDown("slow"); 
+        });
+        // $(".number").html(rand);
         var a=$("td");
         var c=0;
       a.each(function(){
@@ -34,7 +41,7 @@ $(function(){
       })
     
     
-        $(".number").hide().slideUp().slideDown("slow");
+        // $(".number").hide().slideUp().slideDown("slow");
         // $(".number").animate({zoom:"200%"},1000);
         // $(".number").animate({zoom:"100%"},1000);
     }
