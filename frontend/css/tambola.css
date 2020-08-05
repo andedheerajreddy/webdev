@@ -23,7 +23,7 @@ table,tr,td{
     text-align: center;
     margin-top: 30px;
     margin-bottom: 30px;
-    width:100%;
+    max-width:1140px;
 }
 .number{
 font-size: 70px;
