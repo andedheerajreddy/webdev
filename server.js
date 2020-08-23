@@ -1,37 +1,32 @@
-var express=require('express');
-const { json } = require('express');
+var express=require("express");
 var app=express();
-app.use(express.static('frontend'));
+var mongoose=require("mongoose");
 
-app.get('/',(req,res)=>{
-    res.sendFile(__dirname+"/frontend/html/home.html");  
+var config=require("./backend/lib/config");
+var projects=require("./backend/routers/projects");
+var users=require("./backend/routers/users");
+const { db_connectionstring } = require("./backend/lib/config");
+//-------------MIDDLE WARE-----------------------------------
+app.use(express.static("frontend"));
+app.use(express.json());
+app.use(express.urlencoded({extended:true}));
+//----------------------DB CONNNECT-------------------------------
+var JSONoption={ useUnifiedTopology: true, useNewUrlParser: true,  useCreateIndex: true};
+mongoose.connect(config.db_connectionstring,JSONoption)
+.then(()=>{console.log("DB CONNECTED!!!!!!!");})
+.catch(err=>console.log(err))
+//----------------------------------------------------------------
+app.get("/",(req,res)=>{
+    res.sendFile(__dirname+"/frontend/html/home.html");
 })
-app.get('/resume',(req,res)=>{
-    res.sendFile(__dirname+"/frontend/html/index.html");
-})
-app.get('/clock',(req,res)=>{
-    res.sendFile(__dirname+"/frontend/html/clock.html")
-})
-app.get('/snake',(req,res)=>{
-    res.sendFile(__dirname+"/frontend/html/snake.html")
-})
-app.get('/tambola',(req,res)=>{
-    res.sendFile(__dirname+"/frontend/html/tambola.html")
+app.get("/user",(req,res)=>{
+    res.sendFile(__dirname+"/frontend/html/user.html");
 })
 
-var jsonArray=[{
-    name:"dheeraj",
-    age:24
-},
-{
-    name:"NIKHIL",
-    age:55
-}];
-app.get("/ajax",(req,res)=>{
-    res.sendFile(__dirname+"/frontend/html/ajax.html")
+app.use("/home",projects);
+app.use("/api/users",users);
 
+//-------------------------PORT---------------------------------
+app.listen(config.port,()=>{
+    console.log("SERVER RUNNING ON PORT "+config.port);
 })
-app.get("/api/data",(req,res)=>{
-  res.json(jsonArray);
-});
-app.listen(process.env.PORT||4000,()=>{console.log("server started running");})

@@ -1,5 +1,7 @@
-body{
+section{
     margin: auto 10%;
+    float:none !important;
+    width: 100%;
     font-family: 'Salsa', cursive;
 
 }
@@ -60,12 +62,9 @@ td{
 
   width:200% !important;
 }
-section{
-    float:none !important;
-    width: 100%;
-}
+
 @media (max-width:685px){
-    /* body{
+    /* section{
         margin:0%;
     } */
     .adjust{

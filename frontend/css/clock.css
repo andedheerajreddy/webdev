@@ -1,10 +1,13 @@
 body{
+    background-color: #f5f1da;
+}
+section{
     margin-top:5%;
     margin-left: 5%;
     background-color: #f5f1da;
     font-family: 'Salsa', cursive;
 }
-div{
+.hello{
     margin-top: 2%;
     float:left;
     width:30%;
