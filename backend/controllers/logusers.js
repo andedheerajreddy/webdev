@@ -1,5 +1,4 @@
 var loginusers= require("../models/signupmodel");
-var bcrypt=require("bcrypt");
 module.exports={
     checkuser:(obj,cb)=>{
         loginusers.find({email:obj.email},(err,user)=>{
