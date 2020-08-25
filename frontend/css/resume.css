@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+
+}
 section{
 	border: 20px solid #bdc3c7;
     	
@@ -52,6 +56,7 @@ hr{
     }
     
   }
+  
   
 @media screen and (min-width: 960px) {
     section {
