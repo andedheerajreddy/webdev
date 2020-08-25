@@ -1,20 +1,27 @@
 {
-  "engines": {
-    "node": "13.11.0"
-  },
-  "name": "project",
+  "name": "webdev",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "bcrypt-nodejs": "^0.0.3",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.0"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andedheerajreddy/webdev.git"
+  },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "bcrypt": "^5.0.0",
-    "express": "^4.17.1",
-    "mongoose": "^5.10.0"
-  }
+  "bugs": {
+    "url": "https://github.com/andedheerajreddy/webdev/issues"
+  },
+  "homepage": "https://github.com/andedheerajreddy/webdev#readme"
 }
