@@ -41,7 +41,7 @@ app.get("/signup",(req,res)=>{
 app.post("/signup",(req,res)=>{
         login.createuser(req.body,(err,userrrr)=>{
             if(userrrr!=null)
-            res.sendFile(__dirname+"/frontend/html/home.html")
+            res.redirect("/");
             else
             res.redirect("/");
         })
