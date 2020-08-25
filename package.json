@@ -4,7 +4,6 @@
   "description": "",
   "main": "server.js",
   "dependencies": {
-    "bcrypt": "^5.0.0",
     "bcrypt-nodejs": "^0.0.3",
     "express": "^4.17.1",
     "mongoose": "^5.10.0"
