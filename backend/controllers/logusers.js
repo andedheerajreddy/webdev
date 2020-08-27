@@ -15,7 +15,7 @@ module.exports={
                         //    else cb(null,null);  
                         // });
                         if(obj.password==user[0].password)
-                        cb(null,"true");
+                        cb(null,user[0]);
                         else cb(null,null);  
                       }
                       else
