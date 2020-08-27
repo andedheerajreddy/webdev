@@ -74,7 +74,7 @@ app.post("/signup",(req,res)=>{
             if(userrrr!=null)
             res.redirect("/");
             else
-            res.redirect("/");
+            res.redirect("/signup");
         })
 })
 app.get("/user",isAuthenticated,(req,res)=>{
